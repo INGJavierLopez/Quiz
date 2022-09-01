@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="trueButton">True</string>
+    <string name= "falseButton">False</string>
+    <string name= "correctToast" >Correcto!!!</string>
+    <string name= "incorrectToast">Incorrecto</string>
+    <string name= "nextButton">Siguiente Pregunta</string>
+    <string name= "Quest1" >Walter White murio a los 42 anos</string>
+    <string name= "Quest2" >Combo enveneno a brock</string>
+    <string name= "Quest3" >Jessie mato a Crazy 8</string>
+    <string name= "Quest4" >Hank muere de un disparo a la cabeza</string>
+    <string name= "Quest5" >El ultimo capitulo de Breaking Bad se llama Ozymandias</string>
+</resources>
