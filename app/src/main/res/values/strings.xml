@@ -6,8 +6,23 @@
     <string name= "incorrectToast">Incorrecto</string>
     <string name= "nextButton">Siguiente Pregunta</string>
     <string name= "Quest1" >Walter White murio a los 42 anos</string>
-    <string name= "Quest2" >Combo enveneno a brock</string>
-    <string name= "Quest3" >Jessie mato a Crazy 8</string>
-    <string name= "Quest4" >Hank muere de un disparo a la cabeza</string>
-    <string name= "Quest5" >El ultimo capitulo de Breaking Bad se llama Ozymandias</string>
+    <string name= "Quest2" >Hank muere de un disparo a la cabeza</string>
+    <string name= "Quest3" >El ultimo capitulo de Breaking Bad se llama Ozymandias</string>
+    <string name= "Quest4">Gustavo contrato al primer ingeniero que visito la lavanderia</string>
+    <string name= "Quest5">El segundo nombre de Jimmy es Morgan</string>
+    <string name= "Quest6">Walter deja morir a Jane</string>
+    <string name= "Quest7">Walter nunca le pudo entregar su dinero a su familia</string>
+    <string name= "Quest8">Jessie no logra escapar de los Neonaziz</string>
+    <string name= "Quest9">La botella que enveneno a Don Heladio era de Safiro Reposado</string>
+    <string name= "Quest10">Leonel Salamanca muere de un disparo en la cabeza</string>
+    <string name= "Quest11">Hector Salamanca, Gustavo y Victor mueren en la explosion del asilo</string>
+    <string name= "Quest12">Mike intenta matar a Hector porque sus sobrinos amenazaron a su nuera</string>
+    <string name= "Quest13">Al llamar a Ed, el cliente tiene que pedir un filtro de aire para una aspiradora Hoover Max Extract® 60 Pressure Pro™</string>
+    <string name= "Quest14">El mural detras del escritorio de la oficina de saul lleva la leyenda "We are the people"</string>
+    <string name= "Quest15">Jimmy McGill es condenado a 76 años de prision</string>
+    <string name= "Quest16">Spooge le dice a Jesse que es su heroe</string>
+    <string name= "Quest17">Walter y Jesse pasan tres dias en el desierto cocinando Metanfetamina</string>
+    <string name= "Quest18">Walter enbeneno a Brock con ricino</string>
+    <string name= "Quest19">167 personas murieron en el choque de los aviones</string>
+    <string name= "Quest20">El carro en que llegan Emilio y Crazy 8 a reunirse con walter en el desierto es de color Naranja</string>
 </resources>
