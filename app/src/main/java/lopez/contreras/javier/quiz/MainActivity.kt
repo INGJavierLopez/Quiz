@@ -18,8 +18,6 @@ class MainActivity : AppCompatActivity() {
         binding =ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Log.d(TAG,"Got a QuizViewModel:$quizViewModel")
-
         binding.trueButton.setOnClickListener { view : View ->
             checkAnswer(true,view)
         }
