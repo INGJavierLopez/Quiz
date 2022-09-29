@@ -3,6 +3,7 @@ package lopez.contreras.javier.quiz
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ActivityScenario.launch
 import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
@@ -26,5 +27,18 @@ class MainActivityTest {
     fun verificarSiSeMuestraPrimerPreguntaOnLaunch(){
         onView(withId(R.id.question_text_view))
             .check(matches(withText(R.string.Quest1)))
+    }
+    @Test
+    fun seMuestraLaSegundaPreguntaAlDarClick(){
+        onView(withId(R.id.nextButton)).perform(click())
+        onView(withId(R.id.question_text_view))
+            .check(matches(withText(R.string.Quest2)))
+    }
+    @Test
+    fun seMantieneElEstadoDeLaUI(){
+        onView(withId(R.id.nextButton)).perform(click())
+        scenario.recreate()
+        onView(withId(R.id.question_text_view))
+            .check(matches(withText(R.string.Quest2)))
     }
 }
