@@ -8,7 +8,7 @@ const val CURRENT_INDEX_KEY = "CURRENT_INDEX_KEY"
 const val IS_CHEATER_KEY = "IS_CHEATER_KEY"
 class QuizModelView(private val savedStateHandle: SavedStateHandle): ViewModel() {
     private var currentIndex: Int
-        get() = savedStateHandle[CURRENT_INDEX_KEY] ?: 0
+    get() = savedStateHandle[CURRENT_INDEX_KEY] ?: 0
     set(value) = savedStateHandle.set(CURRENT_INDEX_KEY, value)
 
     private val questionBank = listOf(
@@ -46,5 +46,11 @@ class QuizModelView(private val savedStateHandle: SavedStateHandle): ViewModel()
     fun nextQuestion(){
         currentIndex = (currentIndex + 1) %questionBank.size
     }
-
+    fun backQuestion(){
+        if (currentIndex == 0){
+            currentIndex = questionBank.size-1
+        }else {
+            currentIndex = (currentIndex - 1) %questionBank.size
+        }
+    }
 }

@@ -8,10 +8,11 @@
 
     <TextView
         android:id="@+id/question_text_view"
-        android:layout_width="177dp"
-        android:layout_height="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="24dp" />
+        android:padding="24dp"
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -20,32 +21,50 @@
 
         <Button
             android:id="@+id/trueButton"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/trueButton"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:text="@string/trueButton" />
 
         <Button
             android:id="@+id/falseButton"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/falseButton"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:text="@string/falseButton" />
 
     </LinearLayout>
+
     <Button
         android:id="@+id/cheat_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/cheatButton" />
-    <Button
-        android:id="@+id/nextButton"
-        android:layout_width="175dp"
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="end"
-        android:text="@string/nextButton"
-        app:icon="@drawable/arrow_right"
-        app:iconGravity="end" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/backButton"
+            app:icon="@drawable/arrow_left"
+            app:iconGravity="start" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/nextButton"
+            app:icon="@drawable/arrow_right"
+            app:iconGravity="end" />
+
+    </LinearLayout>
 
 </LinearLayout>
