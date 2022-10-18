@@ -33,7 +33,12 @@
             style="?android:attr/buttonBarButtonStyle" />
 
     </LinearLayout>
-
+    <Button
+        android:id="@+id/cheat_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/cheatButton" />
     <Button
         android:id="@+id/nextButton"
         android:layout_width="175dp"

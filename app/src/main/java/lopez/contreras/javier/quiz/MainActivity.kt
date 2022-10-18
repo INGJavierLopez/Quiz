@@ -1,9 +1,12 @@
 package lopez.contreras.javier.quiz
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import com.google.android.material.snackbar.Snackbar
 import lopez.contreras.javier.quiz.databinding.ActivityMainBinding
@@ -11,7 +14,15 @@ import lopez.contreras.javier.quiz.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val quizViewModel: QuizModelView by viewModels()
-
+    private val cheatLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        // Handle the result
+        if (result.resultCode == Activity.RESULT_OK) {
+            quizViewModel.isCheater =
+                result.data?.getBooleanExtra(EXTRA_ANSWER_SHOW, false) ?: false
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
@@ -28,6 +39,12 @@ class MainActivity : AppCompatActivity() {
             quizViewModel.nextQuestion()
             actualizarPregunta()
         }
+        binding.cheatButton?.setOnClickListener {
+            //start cheat
+            val answerIsTrue = quizViewModel.currentQuestionAnswer
+            val intent = CheatActivity.newIntent(this@MainActivity, answerIsTrue)
+            cheatLauncher.launch(intent)
+        }
         actualizarPregunta()
     }
 
@@ -37,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun checkAnswer(answer: Boolean,view: View){
         val correctAnswer = quizViewModel.currentQuestionAnswer
-            if (answer == correctAnswer){
+        if (answer == correctAnswer){
                 R.string.correctToast
                 val mySnack = Snackbar.make(view,R.string.correctToast,Snackbar.LENGTH_LONG)
                 mySnack.setBackgroundTint(getColor(R.color.green))

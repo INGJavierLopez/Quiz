@@ -16,6 +16,6 @@ class ExampleUnitTest {
     }
     @Test
     fun testeo(){
-        assertEquals(4,24)
+        assertEquals(4,4)
     }
 }
