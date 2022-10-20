@@ -3,6 +3,7 @@ package lopez.contreras.javier.quiz
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,7 @@ class CheatActivity : AppCompatActivity() {
         binding = ActivityCheatBinding.inflate(layoutInflater)
         setContentView(binding.root)
         answerIsTrue = intent.getBooleanExtra(EXTRA_ANSWER_IS_TRUE,false)
+
         binding.showAnswerButton.setOnClickListener { view : View ->
             val mySnack = Snackbar.make(view,R.string.judgmentToast,Snackbar.LENGTH_LONG)
             mySnack.setBackgroundTint(getColor(R.color.orange))
@@ -32,6 +34,7 @@ class CheatActivity : AppCompatActivity() {
             setAnswerShownResult(true)
 
         }
+        binding.apiLevel.setText("Api Level "+Build.VERSION.SDK_INT.toString())
     }
     private fun setAnswerShownResult(isAnserShow: Boolean){
         val data = Intent().apply {
