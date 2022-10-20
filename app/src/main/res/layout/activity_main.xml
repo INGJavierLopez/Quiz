@@ -54,7 +54,8 @@
             android:gravity="center"
             android:text="@string/backButton"
             app:icon="@drawable/arrow_left"
-            app:iconGravity="start" />
+            app:iconGravity="start"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/nextButton"
@@ -63,7 +64,8 @@
             android:gravity="center"
             android:text="@string/nextButton"
             app:icon="@drawable/arrow_right"
-            app:iconGravity="end" />
+            app:iconGravity="end"
+            style="?android:attr/buttonBarButtonStyle" />
 
     </LinearLayout>
 
